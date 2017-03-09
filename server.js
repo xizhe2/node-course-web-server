@@ -1,6 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');
 
+// const port = process.env.PORT || 5000;
 const port = process.env.PORT || 3000;
 //to creat an app just need to call the method express()
 var app = express();
