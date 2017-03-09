@@ -1,6 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');
 
+const port = process.env.PORT || 3000;
 //to creat an app just need to call the method express()
 var app = express();
 var fs = require('fs');
@@ -67,6 +68,6 @@ app.get('/bad', (req, res) => {
 
 
 
-app.listen(3000, () =>{
-  console.log('Server 3000 is listenning!');
+app.listen(port, () =>{
+  console.log(`Server ${port} is listenning!`);
 });
