@@ -1,8 +1,8 @@
 const express = require('express');
 const hbs = require('hbs');
 
-// const port = process.env.PORT || 5000;
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
+// const port = process.env.PORT || 3000;
 //to creat an app just need to call the method express()
 var app = express();
 var fs = require('fs');
@@ -58,6 +58,12 @@ app.get('/', (req, res) =>{
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
     pageTitle: 'About Page'
+  });
+});
+
+app.get('/project', (req, res) => {
+  res.render('project.hbs', {
+    pageTitle: 'Project Page'
   });
 });
 
