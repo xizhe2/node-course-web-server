@@ -1,5 +1,25 @@
 language: node_js
 node_js:
-  - "6.9.4"
-env:
-    - EMBER_VERSION=default
+  - 6.9.4
+
+services:
+  - mongodb
+
+git:
+    submodules: true
+
+install:
+  - npm install
+
+cache:
+  directories:
+    - node_modules
+
+script:
+ - npm test
+ - npm run grunt
+
+notifications:
+  email:
+    on_success: never
+    on_failure: never
