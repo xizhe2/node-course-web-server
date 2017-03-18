@@ -2,3 +2,8 @@ language: node_js
 node_js:
   - "iojs"
   - "6"
+env:
+    - EMBER_VERSION=default
+    - EMBER_VERSION=release
+    - EMBER_VERSION=beta
+    - EMBER_VERSION=canaryS
